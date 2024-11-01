@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="canonical" href="https://yohoho.io/help.html" />
+
+    <style type="text/css">
+        html,
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: black;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            overscroll-behavior: none;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            margin: 2vw 2vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0e84ff;
+        }
+
+        a:hover {
+            color: #FE9300;
+        }
+
+        li {
+            margin-bottom: 1vh;
+        }
+
+        ul {
+            margin-bottom: 6vh;
+        }
+
+        .button {
+            color: black;
+            border: 1px solid black;
+            border-radius: 1vh;
+            padding: 0.5vh 1vh;
+            font-size: 1.5vh;
+        }
+
+    </style>
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="YoHoHo.io">
+    <meta name="viewport" content="minimal-ui, user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width" />
+    <title>YoHoHo.io</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103015995-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-103015995-6');
+
+    </script>
+</head>
+
+<body>
+    <h1>Help / FAQ</h1>
+    <h2>I have a message about WebGL not supported or I have display issues</h2>
+    <div>
+        <ul>
+            <li><a href="https://webglreport.com/" target="_blank">WebGLReport</a> should confirm support for WebGL v1. 'Unmasked Renderer' should show your GPU name. If 'Google SwiftShader' is shown, your browser is using a CPU renderer and hardware acceleration is disabled.</li>
+            <li>Check you have the latest version for your browser</li>
+            <li>Check hardware acceleration is enabled for your browser</li>
+            <li>Check WebGL is enabled for your browser</li>
+            <li><a href="https://support.microsoft.com/en-us/windows/update-drivers-in-windows-10-ec62f46c-ff14-c91d-eead-d7126dc1f7b6" target="_blank">Update your graphics drivers</a></li>
+        </ul>
+        <h3>Chrome</h3>
+        <div>Open "Menu | Settings..." and search for 'hardware'. Ensure setting 'Use hardware acceleration when available' is enabled.</div>
+        <div>After restarting chrome, enter chrome://gpu/ in your address bar: it should now show 'Hardware accelerated' for WebGL. If not, try to enable 'Override software rendering list' in chrome://flags/#ignore-gpu-blocklist</div>
+        <h3>Safari</h3>
+        <div>Open "Safari | Preferences...", select 'Security' and enable 'Allow WebGL' setting</div>
+        <h3>Firefox</h3>
+        <div>Open about:config and check 'webgl.disabled' is set to 'false'</div>
+        <div>In settings, under 'Performance', check 'Use hardware acceleration when available' is enabled.</div>
+    </div>
+    <h2 id="performance">How can I improve the game performance on a Windows laptop?</h2>
+    <div>
+        <ul>
+            <li>Plug-in your charger while playing to avoid Windows lowering performance to save battery</li>
+            <li>If you have an NVIDIA GPU, make sure it's being used by your browser (eg Chrome). Check <a href="https://www.techadvisor.co.uk/how-to/pc-components/how-set-default-graphics-card-3612668/" target="_blank">this guide</a> or <a href="https://pureinfotech.com/set-gpu-app-windows-10/" target="_blank">this one</a>. </li>
+            <li>If you have an ATI/AMD Radeon card, open the Catalyst Control Center, go to Graphics > PowerPlay - Set Plugged In to Maximum Performance. Click Apply.</li>
+            <li>To determine which GPU is actually being used, <a href="https://webglreport.com/" target="_blank">go there</a> and look at "Unmasked Renderer". Alternatively, you can right-click the chrome.exe shortcut and force a specific graphics processor within the menu.</li>
+            <li>If you have no additional GPU but an integrated Intel GPU, make sure it's set to "Maximum performance" when Plugged In: open Intel Graphics settings, click "Power", "Plugged-In" and select "Maximum Performance" (check <a href="https://www.howtogeek.com/245592/how-to-improve-gaming-performance-with-intel-hd-graphics-chips/" target="_blank">this guide</a> for more details)</li>
+            <li>Switch to a high-performance power plan when plugged-in, check <a href="https://www.windowscentral.com/how-manage-custom-power-plans-windows-10">this guide</a></li>
+            <li>Close other tabs/applications that may consume CPU/GPU resources or internet bandwidth</li>
+            <li>Prefer wired (ethernet) over wifi</li>
+        </ul>
+    </div>
+    <h2>Why is my progress not saved?</h2>
+    <div>
+        <div>If you have not created an account, your progress is saved within your browser's local storage. Make sure cookies are not cleared when exiting.</div>
+        <ul>
+            <li>Do not use incognito mode, it clears cookies when you exit the browser.</li>
+            <li>On iPad/iPhone, uncheck "Block Cookies" in Settings > Safari > Privacy &amp; Security.</li>
+            <li>Check for any privacy plugin that blocks or deletes cookies.</li>
+        </ul>
+    </div>
+    <h2 id="google">Google sign-in issues</h2>
+    <div>
+        <ul>
+            <li>If you use chrome, try to logout from the browser (top-right icon) or on <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a></li>
+            <li>Alternatively, try to delete your cookies for "accounts.google.com" and ONLY THIS DOMAIN</li>
+            <li>Make sure your browser or one of your browser plugins (privacy plugins, adblock...) is not blocking social plugins/buttons.</li>
+            <li>To sign-in with google in incognito mode, you need to enable specific cookies, <a href="https://developers.google.com/identity/sign-in/web/troubleshooting#third-party_cookies_and_data_blocked" target="_blank">see the documentation here</a></li>
+        </ul>
+    </div>
+    <h2>How do I restart my progress?</h2>
+    <div>
+        <div><a href="/?restart">Click here if you want to restart your progress</a>. You will lose all your progress, characters, pets, stats and coins.</div>
+    </div>
+    <div style="margin-top: 4vh">
+        <a href="/" class="button">Back to homepage</a>
+    </div>
+
+</body>
+
+</html>
